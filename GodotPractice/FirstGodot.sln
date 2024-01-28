@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstGodot", "FirstGodot.csproj", "{2EF03A55-77D9-4515-972B-85DD2488D850}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.Release|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{2EF03A55-77D9-4515-972B-85DD2488D850}.Release|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70DF9C41-1C4B-48F3-AA63-287A174EFB70}
+	EndGlobalSection
+EndGlobal

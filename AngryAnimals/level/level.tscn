@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://db0mwng7up346"]
+
+[ext_resource type="Script" path="res://level/level.cs" id="1_52bt7"]
+[ext_resource type="Texture2D" uid="uid://s21lanrqr448" path="res://assets/scene/colored_castle.png" id="1_m1sg1"]
+[ext_resource type="PackedScene" uid="uid://dwj1sbiddlq3f" path="res://cup/cup.tscn" id="2_uxtsg"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_52bt7")
+
+[node name="ColoredCastle" type="Sprite2D" parent="."]
+position = Vector2(450, 323)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_m1sg1")
+
+[node name="Cup" parent="." instance=ExtResource("2_uxtsg")]
+position = Vector2(605, 401)
+
+[node name="Cup2" parent="." instance=ExtResource("2_uxtsg")]
+position = Vector2(404, 397)
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 424.0
+offset_bottom = 184.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="AnimalStart" type="Marker2D" parent="."]
+position = Vector2(150, 330)

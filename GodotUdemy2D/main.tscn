@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://coexupi02h7q3"]
+
+[ext_resource type="Texture2D" uid="uid://k6p03ei1w3by" path="res://icon.svg" id="1_6bcuf"]
+[ext_resource type="Script" path="res://main.cs" id="1_rpg3c"]
+[ext_resource type="PackedScene" uid="uid://dmjar3kldbr4o" path="res://spinner.tscn" id="2_o2y3n"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(1, 0)
+scale = Vector2(1.00585, 1.00424)
+script = ExtResource("1_rpg3c")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(578.615, 219.071)
+rotation = 0.000601106
+scale = Vector2(0.971412, 0.999955)
+texture = ExtResource("1_6bcuf")
+
+[node name="Icon3" type="Sprite2D" parent="Icon"]
+position = Vector2(260.046, 151.211)
+scale = Vector2(1.02943, 1.00004)
+skew = -3.48091e-05
+texture = ExtResource("1_6bcuf")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(200, 200)
+texture = ExtResource("1_6bcuf")
+
+[node name="Spinner" parent="." instance=ExtResource("2_o2y3n")]
+position = Vector2(841.08, 166.295)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MC" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "TL"
+
+[node name="Label2" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "TR"
+
+[node name="Label3" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "BL"
+
+[node name="Label4" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "BR"
