@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkackacg46mxo"]
+[gd_scene load_steps=6 format=3 uid="uid://dkackacg46mxo"]
 
+[ext_resource type="Script" path="res://main_screen/main_screen.cs" id="1_kxke1"]
 [ext_resource type="FontFile" uid="uid://may31gerqgm7" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_u7pjc"]
 [ext_resource type="PackedScene" uid="uid://chmqo5oyinah4" path="res://front_sprite/front_sprite.tscn" id="2_5yu8w"]
+[ext_resource type="PackedScene" uid="uid://cnwnhimapfew7" path="res://level_button/level_button.tscn" id="2_wpkw8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rembr"]
 font = ExtResource("1_u7pjc")
@@ -16,6 +18,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kxke1")
+levelButtonScence = ExtResource("2_wpkw8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -53,6 +57,8 @@ size_flags_vertical = 3
 
 [node name="HBLevels" type="HBoxContainer" parent="VB"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
 
 [node name="Spacer3" type="Control" parent="VB"]
 layout_mode = 2

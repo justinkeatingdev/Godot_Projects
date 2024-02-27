@@ -5,9 +5,11 @@ using System.Collections.Generic;
 public partial class image_manager : Node
 {
 	List<Dictionary<string, string>> itemImages = new List<Dictionary<string, string>>();
+	public static image_manager image_Manager;
 
 	public override void _Ready()
 	{
+		image_Manager = this;
 		LoadItemImages();
 	}
 
@@ -18,7 +20,7 @@ public partial class image_manager : Node
 		Dictionary<string, string> ii_dcit = new Dictionary<string, string> 
 		{
 			{ "item_name", fn.Replace(".png", "") },
-			{ "item_texture", GD.Load(fullPath).ToString() }
+			{ "item_texture", fullPath }
 		};
 
 		itemImages.Add(ii_dcit);
@@ -45,5 +47,18 @@ public partial class image_manager : Node
 				AddFileToList(file, path);
 			}
 		}
+	}
+
+	public Dictionary<string, string> GetRandomItemImage()
+	{
+		var randomImage = GetRandomElement(itemImages);
+		return randomImage;
+	}
+
+	private static T GetRandomElement<T>(List<T> list)
+	{
+		Random rand = new Random();
+		int index = rand.Next(0, list.Count);
+		return list[index];
 	}
 }
