@@ -6,12 +6,12 @@ public partial class sound_manager : Node
 {
 
 	public static sound_manager sound_Manager;
-	const string SOUND_MAIN_MENU = "SOUND_MAIN_MENU";
-	const string SOUND_IN_GAME = "SOUND_IN_GAME";
-	const string SOUND_SUCCESS = "SOUND_SUCCESS";
-	const string SOUND_GAME_OVER = "SOUND_GAME_OVER";
-	const string SOUND_SELECT_TILE = "SOUND_SELECT_TILE";
-	const string SOUND_SELECT_BUTTON = "SOUND_SELECT_BUTTON";
+	public const string SOUND_MAIN_MENU = "SOUND_MAIN_MENU";
+	public const string SOUND_IN_GAME = "SOUND_IN_GAME";
+	public const string SOUND_SUCCESS = "SOUND_SUCCESS";
+	public const string SOUND_GAME_OVER = "SOUND_GAME_OVER";
+	public const string SOUND_SELECT_TILE = "SOUND_SELECT_TILE";
+	public const string SOUND_SELECT_BUTTON = "SOUND_SELECT_BUTTON";
 
 	public Dictionary<string, string> Sounds = new Dictionary<string, string> 
 	{
