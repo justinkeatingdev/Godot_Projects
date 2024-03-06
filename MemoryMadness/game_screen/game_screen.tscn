@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cflx52twvfgsv"]
+[gd_scene load_steps=8 format=3 uid="uid://cflx52twvfgsv"]
 
 [ext_resource type="Script" path="res://game_screen/GameScreen.cs" id="1_k805j"]
 [ext_resource type="LabelSettings" uid="uid://mv6jw6fd4ilg" path="res://assets/GM_32_dark.tres" id="1_qu2q8"]
 [ext_resource type="Texture2D" uid="uid://wkw0i43gow5i" path="res://assets/ui/blue_button00.png" id="2_apvi7"]
+[ext_resource type="PackedScene" uid="uid://bcbbv6xalpk7n" path="res://memory_tile/memory_tile.tscn" id="2_qwlpp"]
 [ext_resource type="Texture2D" uid="uid://81n47ek8oq8l" path="res://assets/ui/yellow_button00.png" id="3_15a3a"]
 [ext_resource type="Texture2D" uid="uid://dlnitldhunfod" path="res://assets/ui/green_button00.png" id="4_7a7jv"]
 [ext_resource type="LabelSettings" uid="uid://c3hejcwsrjuxc" path="res://assets/GM_32_white.tres" id="5_qjynk"]
@@ -15,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k805j")
+MemTileScene = ExtResource("2_qwlpp")
 
 [node name="HB" type="HBoxContainer" parent="."]
 layout_mode = 1

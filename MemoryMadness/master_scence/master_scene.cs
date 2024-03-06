@@ -36,6 +36,7 @@ public partial class master_scene : CanvasLayer
 	public void OnGameExitPressed()
 	{
 		ShowGame(false);
+		game_manager.game_Manager.ClearNodesOfGroup(game_manager.GROUP_TILE);
 		sound_manager.sound_Manager.PlaySound(Sound, sound_manager.SOUND_MAIN_MENU);
 	}
 
