@@ -15,9 +15,9 @@ radius = 19.0
 [node name="Animal" type="RigidBody2D"]
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_ltdgh")
+freeze = true
 max_contacts_reported = 1
 contact_monitor = true
-freeze = true
 script = ExtResource("1_ofohf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
