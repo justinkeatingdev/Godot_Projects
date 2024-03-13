@@ -10,6 +10,11 @@ public partial class GameScreen : Control
 	public AudioStreamPlayer Sound;
 	public TextureButton ExitButton;
 	public GridContainer TileContainer;
+	public Scorer ScorerNode;
+
+	public Label MovesLabel;
+	public Label PairsLabel;
+
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -17,6 +22,10 @@ public partial class GameScreen : Control
 		Sound = GetNode<AudioStreamPlayer>("Sound");
 		ExitButton = GetNode<TextureButton>("HB/MC2/VBoxContainer/ExitButton");
 		TileContainer = GetNode<GridContainer>("HB/MC1/TitleContainer");
+		ScorerNode = GetNode<Scorer>("Scorer");
+
+		MovesLabel = GetNode<Label>("HB/MC2/VBoxContainer/HB/MovesLabel");
+		PairsLabel = GetNode<Label>("HB/MC2/VBoxContainer/HB2/PairsLabel");
 
 		SingalManager.SignalManager.Connect(SingalManager.SignalName.OnLevelSelected, new Callable(this, MethodName.OnLevelSelected));
 	}
@@ -24,6 +33,8 @@ public partial class GameScreen : Control
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		MovesLabel.Text = Scorer.GetMovesMade();
+		PairsLabel.Text = Scorer.GetPairsMade();
 	}
 
 	public void OnLevelSelected(int levelNum)
@@ -37,6 +48,8 @@ public partial class GameScreen : Control
 		{
 			AddMemoryTitle(iiDict, frameImage);
 		}
+
+		ScorerNode.ClearNewGame(levelSelection.TargetPairs);
 	}
 
 	private void AddMemoryTitle(Dictionary<string, string> iiDict, CompressedTexture2D frameImage)

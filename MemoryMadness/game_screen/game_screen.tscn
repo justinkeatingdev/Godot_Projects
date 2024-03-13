@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cflx52twvfgsv"]
+[gd_scene load_steps=10 format=3 uid="uid://cflx52twvfgsv"]
 
 [ext_resource type="Script" path="res://game_screen/GameScreen.cs" id="1_k805j"]
 [ext_resource type="LabelSettings" uid="uid://mv6jw6fd4ilg" path="res://assets/GM_32_dark.tres" id="1_qu2q8"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://81n47ek8oq8l" path="res://assets/ui/yellow_button00.png" id="3_15a3a"]
 [ext_resource type="Texture2D" uid="uid://dlnitldhunfod" path="res://assets/ui/green_button00.png" id="4_7a7jv"]
 [ext_resource type="LabelSettings" uid="uid://c3hejcwsrjuxc" path="res://assets/GM_32_white.tres" id="5_qjynk"]
+[ext_resource type="PackedScene" uid="uid://bfucrbbglcp4g" path="res://Scorer/scorer.tscn" id="8_2bwpk"]
+[ext_resource type="PackedScene" uid="uid://d0s0c2tu0vfi6" path="res://GameOver/game_over.tscn" id="9_fcbqm"]
 
 [node name="GameScreen" type="Control"]
 layout_mode = 3
@@ -68,7 +70,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HB/MC2/VBoxContainer/HB2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Moves"
+text = "Pairs"
 label_settings = ExtResource("1_qu2q8")
 vertical_alignment = 1
 
@@ -104,5 +106,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
+
+[node name="Scorer" parent="." instance=ExtResource("8_2bwpk")]
+
+[node name="GameOver" parent="." instance=ExtResource("9_fcbqm")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="HB/MC2/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

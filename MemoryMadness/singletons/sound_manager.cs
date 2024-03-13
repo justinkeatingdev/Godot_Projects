@@ -39,6 +39,11 @@ public partial class sound_manager : Node
 		PlaySound(player, SOUND_SELECT_BUTTON);
 	}
 
+	public void PlayTileClick(AudioStreamPlayer player)
+	{
+		PlaySound(player, SOUND_SELECT_TILE);
+	}
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
